@@ -21,14 +21,14 @@ button {
   outline: 0;
   display: inline-block;
   padding: 8px;
-  color: rgb(30, 7, 245);
-  background-color: #000;
+  color: white(30, 7, 245);
+  background-color:blue;
   text-align: center;
   cursor: pointer;
   width: 100%;
   font-size: 18px;
 }
-
+.button {border-radius: 12px;}
 a {
   text-decoration: none;
   font-size: 22px;
@@ -49,26 +49,33 @@ button:hover, a:hover {
   <h1> John Doe</h1>
   <p style="font-size: small; color: blue;"> Software Engineer</p>
   <h4 style="font-weight: bold;"> University of Eastern Africa, Baraton</h4>
-  <p style="align-items: end;"> For admirable and easy development of softwares visit our website. Find finest software engineer at a lower cost</p>
+  <div><input="text"  id="togglee" value="Find me"></div>
   <div style="margin: 24px 0;">
     <a href="#"><i class="fa fa-dribbble"></i></a> 
     <a href="#"><i class="fa fa-twitter"></i></a>  
     <a href="#"><i class="fa fa-linkedin"></i></a>  
     <a href="#"><i class="fa fa-facebook"></i></a> 
   </div>
-  <button type="button" style="background-color: blue;";" onclick="location.href='file:///C:/Users/ruban/OneDrive/Desktop/Profile/test.html'"><p style="color: white;">Contact Me</p></button>
-<script>
-    var hidden = false;
-    function action() {
-        hidden = !hidden;
-        if(hidden) {
-            document.getElementById('togglee').style.visibility = 'hidden';
-        } else {
-            document.getElementById('togglee').style.visibility = 'visible';
+  
+  
+  <script>
+    function toggle()
+    {
+        var x = document.getElementById("div1");
+
+        if(x.style.display === "none") {
+            x.style.display = "block";
+        }
+
+        else{
+            x.style.display = "none";
         }
     }
 </script>
-</div>
+<div id="div1">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div><br><br>
+<button onclick="toggle()" class="button button" style="width:200px; height: 70;"><p style="color: white; font-weight: 300;">Contact Me</p> </button>
 
-</body>
+</body><br><br>
 </html>
